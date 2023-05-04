@@ -42,6 +42,7 @@ public class EncadeamentoControll {
 					if(rand == lista.get(i))
 					{
 						test = false;
+						break;
 					}
 				}
 				if(test)
