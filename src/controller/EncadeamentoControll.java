@@ -1,6 +1,6 @@
 package controller;
 
-import model.ListaInt;
+import matheus.ListaInt.ListaInt;
 
 public class EncadeamentoControll {
 	
