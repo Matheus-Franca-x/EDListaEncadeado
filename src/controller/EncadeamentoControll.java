@@ -9,37 +9,15 @@ public class EncadeamentoControll {
 		super();
 	}
 	
-	public void criaList(int[] vet, ListaInt lista)
+	public void listEncadeado(ListaInt lista, int[] vet)
 	{
-		
 		for (int each: vet)
 		{
-			if(lista.isEmpty())
-			{
-				lista.addFirst(each);
-			}
-			else
-			{
-				try {
-					lista.addLast(each);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		
-	}
-	
-	public void listEncadeado(ListaInt lista)
-	{
-		while(lista.size() < 14)
-		{
-			int rand = (int) (Math.random() * 14) + 1;
 			boolean test = true;
 			try {
 				for (int i = 0; i < lista.size(); i++)
 				{
-					if(rand == lista.get(i))
+					if(each == lista.get(i))
 					{
 						test = false;
 						break;
@@ -47,15 +25,22 @@ public class EncadeamentoControll {
 				}
 				if(test)
 				{
-					lista.addLast(rand);					
+					if(lista.isEmpty())
+					{
+						lista.addFirst(each);
+					}
+					else
+					{
+						lista.addLast(each);
+					}
 				}
-				else if (rand % 2 == 0)
+				else if (each % 2 == 0)
 				{
-					lista.add(rand, 2);
+					lista.add(each, 2);
 				}
 				else
 				{
-					lista.add(rand, 1);					
+					lista.add(each, 1);					
 				}
 				
 				

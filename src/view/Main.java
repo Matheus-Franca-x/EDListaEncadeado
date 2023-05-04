@@ -10,12 +10,10 @@ public class Main {
 	{
 		ListaInt list = new ListaInt();
 		EncadeamentoControll controll = new EncadeamentoControll();
-		int vet[] = {1, 2, 6, 7, 8};
+		int vet[] = {3, 3, 9, 6, 9, 8, 9, 5, 7, 10, 4, 8, 10, 8};
 		
 		
-		controll.criaList(vet, list);
-		
-		controll.listEncadeado(list);
+		controll.listEncadeado(list, vet);
 		
 		
 		while(!list.isEmpty())
